@@ -3,28 +3,28 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>tp1 cadastro</title>
+<link rel="stylesheet" href="css/meuestilo.css">
 </head>
 <body>
 
 	<form action="confirmacao.html" method="get">
-		<h3>
-			Nome: <input type="text" name="nome">
-		</h3>
+		<h3 class="titulo">Faça o seu cadastro</h3>
 		
-		<h3>
-			E-mail: <input type="email" name="email">
-		</h3>
+		<h3>Nome:</h3> 
+		<input type="text" name="nome">
+		
+		<h3>E-mail: </h3>
+		<input type="email" name="email">
 	
-		<h3>
-			Curso:
+	
+		<h3>Curso:</h3>
 			<input type="radio" name="curso" value="G">Graduação
 			<input type="radio" name="curso" value="E">Especialização
 			<input type="radio" name="curso" value="M">Mestrado
 			<input type="radio" name="curso" value="D">Doutorado
-		</h3>
 		
-		<h3>
-			Região:
+		
+		<h3>Região:</h3>
 			<select name="regiao">
 				<option>Norte</option>
 				<option>Nordeste</option>
@@ -32,14 +32,13 @@
 				<option>Sudeste</option>
 				<option>Centro-Oeste</option>
 			</select>
-		</h3>
 		
-		<h3>
-			Disciplinas:
+		
+		<h3>Disciplinas:</h3>
 			<input type="checkbox" name="disciplinas" value="Java">Java
 			<input type="checkbox" name="disciplinas" value="Python">Python
 			<input type="checkbox" name="disciplinas" value="JS">JavaScript
-		</h3>
+		
 		
 		<h3>
 			<button type="submit">Cadastrar</button>
