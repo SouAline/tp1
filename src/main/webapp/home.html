@@ -4,24 +4,54 @@
 <meta charset="ISO-8859-1">
 <title>tp1 cadastro</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/meusestilo.css">
 </head>
 <body>
 
-	<form action="confirmacao.html" method="get">
-		<h2 class="titulo">Faça o seu cadastro</h2>
-		
-		<h3>Nome:</h3> 
-		<input type="text" name="nome">
-		
-		<h3>E-mail: </h3>
-		<input type="email" name="email">
-	
-	
+<div class="container">
+  <h2>Faça seu cadastro</h2>
+  <form action="confirmacao.html" method="get">
+  
+    <div class="form-group">
+      <label class="control-label col-sm-2">Nome:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" placeholder="Digite seu nome" name="nome">
+      </div>
+    </div>
+  
+  
+   <div class="form-group">
+      <label class="control-label col-sm-2">E-mail:</label>
+      <div class="col-sm-10">
+        <input type="email" class="form-control" placeholder="Digite seu e-mail" name="email">
+      </div>
+    </div>
+    
+    
+   <div class="form-group">
+      <label class="control-label col-sm-2">Senha:</label>
+      <div class="col-sm-10">          
+        <input type="password" class="form-control" placeholder="Digite sua senha" name="senha">
+      </div>
+    </div>
+   
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-default">Cadastrar</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+	<div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
 		<h3>Curso:</h3>
 			<input type="radio" name="curso" value="G">Graduação
 			<input type="radio" name="curso" value="E">Especialização
 			<input type="radio" name="curso" value="M">Mestrado
 			<input type="radio" name="curso" value="D">Doutorado
+	    </div>
+    </div>
 		
 		
 		<h3>Região:</h3>
@@ -40,9 +70,6 @@
 			<input type="checkbox" name="disciplinas" value="JS">JavaScript
 		
 		
-		<h3>
-			<button type="submit">Cadastrar</button>
-		</h3>
-	</form>
+		
 </body>
 </html>
