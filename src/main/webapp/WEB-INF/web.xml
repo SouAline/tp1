@@ -3,10 +3,15 @@
   <display-name>tp1app</display-name>
   <welcome-file-list>
     <welcome-file>home.html</welcome-file>
-    <welcome-file>index.htm</welcome-file>
-    <welcome-file>index.jsp</welcome-file>
-    <welcome-file>default.html</welcome-file>
-    <welcome-file>default.htm</welcome-file>
-    <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>AllunoController</display-name>
+    <servlet-name>AllunoController</servlet-name>
+    <servlet-class>br.edu.infnet.model.controller.AllunoController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AllunoController</servlet-name>
+    <url-pattern>/aluno</url-pattern>
+  </servlet-mapping>
 </web-app>
