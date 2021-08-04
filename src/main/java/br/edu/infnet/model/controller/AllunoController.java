@@ -6,22 +6,35 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import br.edu.infnet.model.domain.Aluno;
+
 public class AllunoController extends HttpServlet {
-	
 	private static final long serialVersionUID = 1L;
-  AllunoController() {
+	
+  public AllunoController() {
         super();
      
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
-		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		Aluno aluno = new Aluno(request.getParameter("nome"), request.getParameter("email")); 
+		aluno.setCurso(request.getParameter("curso"));
+		aluno.setRegiao(request.getParameter("regiao"));
+		aluno.setDisciplinas(request.getParameterValues("disciplinas"));
 	
-		doGet(request, response);
+		System.out.println(aluno);
+		
+		for(String disciplina : aluno.getDisciplinas()) {
+			System.out.println("- " + disciplina);
+		}
+		
+		request.getRequestDispatcher("confirmacao.html").forward(request, response);
+		
 	}
 
 }

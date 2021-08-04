@@ -1,11 +1,15 @@
-body {
-	background-color: #3d3d29;
+body{
+	background-color: #ccff99;
 }
 
-.titulo {
-	color: #ff9933;
+.titulo{
+	color: #336600;
 }
 
-h3 {
-	color: #ffffff;
+h3{
+	color: #cc5200;
+}
+
+h2{
+	color:#336600; 
 }

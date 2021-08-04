@@ -2,106 +2,44 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>tp1 cadastro</title>
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<link rel="stylesheet" href="/css/meuestilo.css">
+<title>App2021Cadastra!!</title>
+<link rel="stylesheet" href="css/meuestilo.css">
 </head>
 <body>
-
-  <div class="container">
-		<h2>Seja bem vindo, faça seu cadastro</h2>
-		<form action="confirmacao.html" method="get">
-			<br>
-			<div class="form-group">
-				<label class="control-label col-sm-2">Nome:</label>
-				<div class="col-sm-10">
-					<input type="text" class="form-control"
-						placeholder="Digite seu nome" name="nome">
-				</div>
-				<br> <br>
-			</div>
-
-
-			<div class="form-group">
-				<label class="control-label col-sm-2">E-mail:</label>
-				<div class="col-sm-10">
-					<input type="email" class="form-control"
-						placeholder="Digite seu e-mail" name="email">
-				</div>
-				<br> <br>
-			</div>
-
-
-
-			<div class="form-group">
-				<label class="control-label col-sm-2">Senha:</label>
-				<div class="col-sm-5">
-					<input type="password" class="form-control"
-						placeholder="Digite sua senha" name="senha">
-				</div>
-			</div>
-
-
-		</form>
-</div>
-
-	<div class="container">
-		<h3>Curso</h3>
-		<form>
-			<label class="radio-inline"> <input type="radio" name="curso"
-				value="G">Graduação
-			</label> <label class="radio-inline"> <input type="radio"
-				name="curso" value="E">Especialização
-			</label> <label class="radio-inline"> <input type="radio"
-				name="curso" value="M">Mestrado
-			</label> <label class="radio-inline"> <input type="radio"
-				name="curso" value="D">Doutorado
-			</label>
-		</form>
-	</div>
-
-
-	<div class="container">
-		<h3>Região</h3>
-		<form>
-			<div class="form-group">
-				<div class="col-xs-4">
-					<select class="form-control" id="select">
-						<option>Norte</option>
-						<option>Nordeste</option>
-						<option>Sul</option>
-						<option>Sudeste</option>
-						<option>Centro-Oeste</option>
-					</select>
-				</div>
-			</div>
-			<br>
-		</form>
-	</div>
-
-
-
-	<div class="container">
-		<h3>Disciplinas</h3>
-		<form>
-			<label class="checkbox-inline"> <input type="checkbox"
-				value="Java">Java
-			</label> <label class="checkbox-inline"> <input type="checkbox"
-				value="Py">Python
-			</label> <label class="checkbox-inline"> <input type="checkbox"
-				value="Js">JavaScript
-			</label>
-		</form>
-	</div>
-	<br>
-
-	<div class="form-group">
-		<div class="col-sm-offset-2">
+	<form action="aluno" method="get">
+	<h2 class="titulo">Cadastro de Aluno</h2>
+	<h3>Nome:</h3>
+		<input type="text" name="nome"> 
+ 	
+	<h3>E-mail:</h3> 
+	<input type="text" name="email"> 
 		
-			<button type="submit" class="btn btn-default">Cadastrar</button>
-		</div>
-	</div>
-
+	<h3>Curso:</h3>
+		<input type="radio" name="curso" value="G"> Graduação
+		<input type="radio" name="curso" value="E"> Especialização
+		<input type="radio" name="curso" value="M"> Mestrado
+		<input type="radio" name="curso" value="D"> Doutorado
+	
+		<h3>Região</h3>
+		<select name="região">
+			<option value="N">Norte</option>
+			<option value="No">Nordeste</option>
+			<option value="S">Sul</option>
+			<option value="Su">Sudeste</option>
+			<option value="C">Centro-oeste</option>
+		</select>
+	
+	<h3>Disciplina:</h3>
+		<input type="checkbox" name="java">Java
+		<input type="checkbox" name="python">Python
+		<input type="checkbox" name= "js">JavaScript
+	<p>	
+	<button type="submit">Cadastrar</button>
+	</p>
+  </form>
 </body>
 </html>
+
+	
+	
+	
