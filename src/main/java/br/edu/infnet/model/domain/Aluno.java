@@ -19,19 +19,19 @@ public class Aluno {
 	public String toString() {
 
 		return String.format(
-				"[%s] o aluno %s, com idade de %d cadastrado no e-mail %s da região %s está inscrito em %d disciplinas e paga %f de mensalidade!\n",
+				"[%s] o aluno %s, com idade de %d cadastrado no e-mail %s da região %s está inscrito em %d disciplinas e paga %.2f de mensalidade!\n",
 				curso, nome, idade, email, regiao, disciplinas.length, mensalidade);
 
 	}
 
-	public void impressao() {
-		System.out.println(this);
+	//public void impressao() {
+	//	System.out.println(this);
 
-		System.out.println("Disciplinas:");
-		for (String disc : disciplinas) {
-			System.out.println("- " + disc);
-		}
-	}
+	//	System.out.println("Disciplinas:");
+	//	for (String disc : disciplinas) {
+	//		System.out.println("- " + disc);
+	//	}
+//	}
 
 	public String getNome() {
 		return nome;
