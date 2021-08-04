@@ -9,19 +9,20 @@
 	<form action="aluno" method="post">
 		<h2 class="titulo">Cadastro de Aluno</h2>
 		<h3>Nome:</h3>
-		<input type="text" name="nome">
-		
+		<input value="Aline Souza" type="text" name="nome">
+
 		<h3>Idade:</h3>
 		<input type="text" name="idade">
 
 		<h3>E-mail:</h3>
-		<input type="text" name="email">
+		<input value="ds.aline@gmail.com" type="text" name="email">
 
 		<h3>Curso:</h3>
-		<input type="radio" name="curso" value="G"> Graduação <input
-			type="radio" name="curso" value="E"> Especialização <input
-			type="radio" name="curso" value="M"> Mestrado <input
-			type="radio" name="curso" value="D"> Doutorado
+		<input type="radio" name="curso" value="G"> Graduação
+		<input type="radio" name="curso" value="E" checked="checked">Especialização 
+		<input type="radio" name="curso" value="M">Mestrado 
+		<input type="radio" name="curso" value="D"> Doutorado
+		
 		<h3>Mensalidade:</h3>
 		<input type="text" name="mensalidade">
 
@@ -36,9 +37,9 @@
 		</select>
 
 		<h3>Disciplina:</h3>
-		<input type="checkbox" name="disciplinas" value="Java">Java <input
-			type="checkbox" name="disciplinas" value="Python">Python <input
-			type="checkbox" name="disciplinas" value="Js">JavaScript
+		<input type="checkbox" checked="checked" name="disciplinas" value="Java">Java 
+			<input type="checkbox" checked="checked" name="disciplinas" value="Python">Python
+		    <input type="checkbox" name="disciplinas" value="Js">JavaScript
 		<p>
 			<button type="submit">Cadastrar</button>
 		</p>
