@@ -2,11 +2,11 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>App2021Cadastra!!</title>
+<title>tp1cadastra!!</title>
 <link rel="stylesheet" href="css/meuestilo.css">
 </head>
 <body>
-	<form action="aluno" method="get">
+	<form action="aluno" method="post">
 	<h2 class="titulo">Cadastro de Aluno</h2>
 	<h3>Nome:</h3>
 		<input type="text" name="nome"> 
@@ -21,18 +21,18 @@
 		<input type="radio" name="curso" value="D"> Doutorado
 	
 		<h3>Região</h3>
-		<select name="região">
-			<option value="N">Norte</option>
-			<option value="No">Nordeste</option>
-			<option value="S">Sul</option>
-			<option value="Su">Sudeste</option>
-			<option value="C">Centro-oeste</option>
+		<select name="regiao">
+			<option value="Norte">Norte</option>
+			<option value="Nordeste">Nordeste</option>
+			<option value="Sul">Sul</option>
+			<option value="Sudeste">Sudeste</option>
+			<option value="Centro-Oeste">Centro-oeste</option>
 		</select>
 	
 	<h3>Disciplina:</h3>
-		<input type="checkbox" name="java">Java
-		<input type="checkbox" name="python">Python
-		<input type="checkbox" name= "js">JavaScript
+		<input type="checkbox" name="disciplinas" value="Java">Java
+		<input type="checkbox" name="disciplinas" value="Python">Python
+		<input type="checkbox" name="disciplinas" value="Js">JavaScript
 	<p>	
 	<button type="submit">Cadastrar</button>
 	</p>

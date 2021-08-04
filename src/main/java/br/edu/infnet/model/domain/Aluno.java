@@ -17,9 +17,16 @@ public class Aluno {
 	@Override
 	public String toString() {
 		
-		return String.format("[%s] o aluno %s (%s) da região %s está inscrito em %d disciplinas!/n", curso, nome, email, regiao, disciplinas.length);
+		return String.format("[%s] o aluno %s (%s) da região %s está inscrito em %d disciplinas!\n", curso, nome, email, regiao, disciplinas.length);
 		
-		
+	}
+	public void impressao() {
+		System.out.println(this);
+
+		System.out.println("Disciplinas:");		
+		for(String disc : disciplinas) {
+			System.out.println("- " + disc);
+		}
 	}
 
 	public String getNome() {
