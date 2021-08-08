@@ -42,7 +42,7 @@ public class AlunoController extends HttpServlet {
 		
 		PrintWriter out= response.getWriter();
 		out.println(
-				"!DOCTYPE html >\r\n" +
+				
 				"<html>\r\n" +
 				"<head>\r\n" +
 				"<meta charset= \"ISO-8859-1\">\r\n" + 
@@ -52,7 +52,7 @@ public class AlunoController extends HttpServlet {
 				"<body>\r\n" +
 				"\r\n" +
 				"<a href='aluno'>Voltar</a>\r\n" +
-				"<h2>O aluno" + aluno.getNome() + " foi cadastrado com sucesso!!</h2>\r\n" +
+				"<h2>O aluno " + aluno.getNome() + " foi cadastrado com sucesso!!</h2>\r\n" +
 				"<h3> Quantidade de alunos existentes: " + alunos.size() + "</h3>\r\n" +
 				"<hr>");
 		
