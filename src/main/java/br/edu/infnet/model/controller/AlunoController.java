@@ -1,6 +1,10 @@
 package br.edu.infnet.model.controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -11,10 +15,13 @@ import br.edu.infnet.model.domain.Aluno;
 public class AlunoController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
+	
+	private List<Aluno> alunos;
+	
   public AlunoController() {
         super();
+        alunos = new ArrayList<Aluno>();
         
-     
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -30,14 +37,32 @@ public class AlunoController extends HttpServlet {
 		aluno.setMensalidade(Float.valueOf(request.getParameter("mensalidade")));
 		aluno.setRegiao(request.getParameter("regiao"));
 		aluno.setDisciplinas(request.getParameterValues("disciplinas"));
-	
-		System.out.println(aluno);
 		
-		for(String disciplina : aluno.getDisciplinas()) {
-			System.out.println("- " + disciplina);
+		alunos.add(aluno);
+		
+		PrintWriter out= response.getWriter();
+		out.println(
+				"!DOCTYPE html >\r\n" +
+				"<html>\r\n" +
+				"<head>\r\n" +
+				"<meta charset= \"ISO-8859-1\">\r\n" + 
+				"<title>TP1</title>\r\n" +
+				"<link rel=\"stylesheet\" href=\"css/meuestilo.css\">" + 
+				"</head>\r\n" +
+				"<body>\r\n" +
+				"\r\n" +
+				"<a href='aluno'>Voltar</a>\r\n" +
+				"<h2>O aluno" + aluno.getNome() + " foi cadastrado com sucesso!!</h2>\r\n" +
+				"<h3> Quantidade de alunos existentes: " + alunos.size() + "</h3>\r\n" +
+				"<hr>");
+		
+		for(Aluno a: alunos) {
+			out.println("<h3>Aluno" + a.getNome() + "</h3>");
 		}
-		
-		request.getRequestDispatcher("confirmacao.html").forward(request, response);
+		out.println(
+				"</div>\r\n" +
+				"</body>\r\n" +
+				"</html>");
 		
 	}
 
