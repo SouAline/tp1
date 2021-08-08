@@ -31,7 +31,7 @@ public class AcessoController extends HttpServlet {
 			
 			PrintWriter out= response.getWriter();
 			out.println(
-			"!DOCTYPE html >" +
+			
 					"<html>" +
 					"<head>" +
 					"<meta charset= \"ISO-8859-1\">" + 
@@ -41,7 +41,7 @@ public class AcessoController extends HttpServlet {
 					"<body>" +
 					"\r\n" +
 					"<a href='aluno'>Voltar</a>\r\n" +
-					"<h2>Autenticação inválida para o usuário" + email + "!!</h2>" +
+					"<h2>Autenticação inválida para o usuário " + email + "!!</h2>" +
 					"</body>" +
 					"</html>");
 		}
